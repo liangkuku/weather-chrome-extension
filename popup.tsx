@@ -1,24 +1,35 @@
+import { useCallback, useEffect, useState } from "react"
+
 import { sendToBackground } from "@plasmohq/messaging"
+
+import Weather from "~components/weather/index"
 
 const province = "上海"
 const city = "上海"
 
 function IndexPopup() {
+  const [weatherInfo, setWeatherInfo] = useState()
+
+  const getWeatherInfo = useCallback(async () => {
+    const resp = await sendToBackground({
+      name: "weather",
+      body: {
+        province,
+        city
+      }
+    })
+    if (resp.data) setWeatherInfo(resp.data)
+  }, [])
+
+  useEffect(() => {
+    getWeatherInfo()
+  }, [])
+
   return (
     <div>
-      <button
-        onClick={async () => {
-          const resp = await sendToBackground({
-            name: "weather",
-            body: {
-              province,
-              city
-            }
-          })
-          console.log("7878", resp)
-        }}>
-        获取天气信息
-      </button>
+      {weatherInfo && (
+        <Weather observe={weatherInfo} province="上海" city="上海" />
+      )}
     </div>
   )
 }
