@@ -346,7 +346,7 @@ ul {
 }
 
 #sec-main {
-  height: 470px;
+  height: 370px;
   background-image: linear-gradient(-90deg, #3bbcff, #4af4ff);
   background-image: -webkit-linear-gradient(-90deg, #3bbcff, #4af4ff);
   overflow: hidden;
@@ -365,17 +365,17 @@ ul {
 
 #sec-main.night #layer1 {
   z-index: 3;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/f9fca795811b5d7c0e49580760bb0213.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/f9fca795811b5d7c0e49580760bb0213.png);
 }
 
 #sec-main.night #layer2 {
   z-index: 2;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/53347cfa83d5c053610eaa533d2d02fc.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/53347cfa83d5c053610eaa533d2d02fc.png);
 }
 
 #sec-main.night #layer3 {
   z-index: 1;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/a0de07d1388c2c4f81b8caf96717e1a4.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/a0de07d1388c2c4f81b8caf96717e1a4.png);
 }
 
 #sec-main.night.C9 {
@@ -385,17 +385,17 @@ ul {
 
 #sec-main.night.C9 #layer1 {
   z-index: 3;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/f9fca795811b5d7c0e49580760bb0213.png);
+  background-image: url(https:https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/f9fca795811b5d7c0e49580760bb0213.png);
 }
 
 #sec-main.night.C9 #layer2 {
   z-index: 2;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/53347cfa83d5c053610eaa533d2d02fc.png);
+  background-image: url(https:https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/53347cfa83d5c053610eaa533d2d02fc.png);
 }
 
 #sec-main.night.C9 #layer3 {
   z-index: 1;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/3e6438176c956bd30f19e23659533dee.png);
+  background-image: url(https:https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/3e6438176c956bd30f19e23659533dee.png);
 }
 
 #sec-main #ct-landscape {
@@ -422,12 +422,12 @@ ul {
 
 #sec-main #layer1 {
   z-index: 3;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/982194185a079fad9fd6d7eac312b378.png);
+  background-image: url(https:https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/982194185a079fad9fd6d7eac312b378.png);
 }
 
 #sec-main #layer2 {
   z-index: 2;
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/8fd2514cf9551f15e6925b935c8ce13a.png);
+  background-image: url(https:https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/8fd2514cf9551f15e6925b935c8ce13a.png);
 }
 
 #sec-main #layer3 {
@@ -441,11 +441,11 @@ ul {
 }
 
 #sec-main.C1 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/1355c59170ff294f7a619d5300cbfb0a.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/1355c59170ff294f7a619d5300cbfb0a.png);
 }
 
 #sec-main.C1 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/61e81da52b26f66c5147a241679a7a24.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/61e81da52b26f66c5147a241679a7a24.png);
 }
 
 #sec-main.C1 #layer3 {
@@ -458,11 +458,11 @@ ul {
 }
 
 #sec-main.C3 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/ea607fb41199de44ee7a648e1eb995c7.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/ea607fb41199de44ee7a648e1eb995c7.png);
 }
 
 #sec-main.C3 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/541c915122a0b917dcae14d491674a5c.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/541c915122a0b917dcae14d491674a5c.png);
 }
 
 #sec-main.C3 #layer3 {
@@ -475,11 +475,11 @@ ul {
 }
 
 #sec-main.C4 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/211423b5b50714150fdb06d73bdc96d0.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/211423b5b50714150fdb06d73bdc96d0.png);
 }
 
 #sec-main.C4 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/e517d1c2d0a2e590a58fb216f625b0d8.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/e517d1c2d0a2e590a58fb216f625b0d8.png);
 }
 
 #sec-main.C4 #layer3 {
@@ -492,11 +492,11 @@ ul {
 }
 
 #sec-main.C5 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/126c55c27b0a06df9027201b805e4019.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/126c55c27b0a06df9027201b805e4019.png);
 }
 
 #sec-main.C5 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/5ef7f9eff77a2e681e811ef621065ea0.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/5ef7f9eff77a2e681e811ef621065ea0.png);
 }
 
 #sec-main.C5 #layer3 {
@@ -509,11 +509,11 @@ ul {
 }
 
 #sec-main.C6 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/bb31ccd9f8190bda0af8a7639824999e.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/bb31ccd9f8190bda0af8a7639824999e.png);
 }
 
 #sec-main.C6 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/6fb63be6fbda894b145066b5b32e14d6.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/6fb63be6fbda894b145066b5b32e14d6.png);
 }
 
 #sec-main.C6 #layer3 {
@@ -526,11 +526,11 @@ ul {
 }
 
 #sec-main.C7 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/7dcf5f773971982115abdb8fd1414108.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/7dcf5f773971982115abdb8fd1414108.png);
 }
 
 #sec-main.C7 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/fc49c43624c9c35132df7087aa0c72e0.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/fc49c43624c9c35132df7087aa0c72e0.png);
 }
 
 #sec-main.C7 #layer3 {
@@ -543,15 +543,15 @@ ul {
 }
 
 #sec-main.C9 #layer1 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/1760b3821904f2080269709e89a22e26.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/1760b3821904f2080269709e89a22e26.png);
 }
 
 #sec-main.C9 #layer2 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/4f99c267041530f361776065c5af2671.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/4f99c267041530f361776065c5af2671.png);
 }
 
 #sec-main.C9 #layer3 {
-  background-image: url(//mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/2bbce2b25f1f2a8af1fbf7c9215a6afe.png);
+  background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/2bbce2b25f1f2a8af1fbf7c9215a6afe.png);
 }
 
 #sec-main img,
@@ -651,9 +651,9 @@ ul {
   -webkit-transition: opacity 0.75s;
 }
 
-#sec-main #ct-pub .txt.hide {
+/* #sec-main #ct-pub .txt.hide {
   opacity: 0;
-}
+} */
 
 #sec-main #txt-temperature {
   font-size: 62px;
@@ -1485,25 +1485,25 @@ ul {
 }
 
 #sec-share.show.guide #cover.web-qq {
-  background-image: url(//mat1.gtimg.com/www/mobi/2017/image/guideqq.png);
+  background-image: url(https://mat1.gtimg.com/www/mobi/2017/image/guideqq.png);
 }
 
 #sec-share.show.guide #cover.web-wxf {
-  background-image: url(//mat1.gtimg.com/www/mobi/2017/image/guidewxf.png);
+  background-image: url(https://mat1.gtimg.com/www/mobi/2017/image/guidewxf.png);
 }
 
 #sec-share.show.guide #cover.web-wxt {
-  background-image: url(//mat1.gtimg.com/www/mobi/2017/image/guidewxt.png);
+  background-image: url(https://mat1.gtimg.com/www/mobi/2017/image/guidewxt.png);
 }
 
 #sec-share.show.guide #cover.wx-wx {
-  background: url(//mat1.gtimg.com/www/mobi/image/weinxin_share_dialog.png)
+  background: url(https://mat1.gtimg.com/www/mobi/image/weinxin_share_dialog.png)
     no-repeat 100% 0 rgba(0, 0, 0, 0.5);
   background-size: 234px 95px;
 }
 
 #sec-share.show.guide #cover.wx-qq {
-  background: url(//mat1.gtimg.com/www/mobi/2017/image/qq_share_dialog.png)
+  background: url(https://mat1.gtimg.com/www/mobi/2017/image/qq_share_dialog.png)
     no-repeat 100% 0 rgba(0, 0, 0, 0.5);
   background-size: 234px 95px;
 }
@@ -1655,7 +1655,7 @@ ul {
 
 .container {
   display: block;
-  max-width: 500px;
+  max-width: 425px;
   margin: 0 auto;
   box-sizing: border-box;
 }

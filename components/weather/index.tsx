@@ -34,7 +34,7 @@ function Weather({
   const [livingWidth, setLivingWidth] = useState(500)
   const [hoursLeft, setHousrLeft] = useState(0) // 小时预报
   const [daysLeft, setDaysLeft] = useState(0) // 7天预报
-  const [tip, setTip] = useState(0) // tip：切换
+  // const [tip, setTip] = useState(1) // tip：切换
   const hoursRef = useRef(null)
   const daysRef = useRef(null)
 
@@ -107,6 +107,7 @@ function Weather({
    * @param {Object} observe
    */
   const initHours = (observe) => {
+    // console.log("7878",observe["forecast_1h"])
     let keys = Object.keys(observe["forecast_1h"])
       .sort((pre, cur) => {
         const m = parseInt(pre)
@@ -120,6 +121,7 @@ function Weather({
         }
       })
       .slice(0, 25)
+    console.log("7878", keys)
     let list = []
     keys.forEach((key) => {
       let day = observe["forecast_1h"][key]
@@ -150,7 +152,7 @@ function Weather({
         <li className="item" key={key} style={{ width: "3.84615%" }}>
           <p className="txt-time">{time}</p>
           <img
-            src={`//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/${_dayOrNight}/${day["weather_code"]}.svg`}
+            src={`https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/${_dayOrNight}/${day["weather_code"]}.svg`}
             className="icon"
           />
           <p className="txt-degree positive">{day["degree"]}</p>
@@ -161,7 +163,7 @@ function Weather({
           <li className="item keypoint" key="100" style={{ width: "3.84615%" }}>
             <p className="txt-time">{sunrise}</p>
             <img
-              src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/rise.svg"
+              src="https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/rise.svg"
               className="icon"
             />
             <p className="txt-key">日出</p>
@@ -173,7 +175,7 @@ function Weather({
           <li className="item keypoint" key="101" style={{ width: "3.84615%" }}>
             <p className="txt-time">{sunset}</p>
             <img
-              src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/set.svg"
+              src="https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/set.svg"
               className="icon"
             />
             <p className="txt-key">日落</p>
@@ -216,14 +218,14 @@ function Weather({
     curX = e.clientX
     hoursDragLock = false
   }
-  const changeTip = () => {
-    let c = 0
-    for (let i in observe["tips"]["observe"]) {
-      c++
-    }
-    let t = (tip + 1) % c
-    setTip(t)
-  }
+  // const changeTip = () => {
+  //   let c = 0
+  //   for (let i in observe["tips"]["observe"]) {
+  //     c++
+  //   }
+  //   let t = (tip + 1) % c
+  //   setTip(t)
+  // }
   /**
    * 小时预报：白天或晚上
    * @param {moment} date
@@ -550,7 +552,7 @@ function Weather({
                   <p className="weather">{item.night_weather}</p>
                   <img
                     src={
-                      "//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/" +
+                      "https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/" +
                       item.day_weather_code +
                       ".svg"
                     }
@@ -560,7 +562,7 @@ function Weather({
                 <div className="ct-night">
                   <img
                     src={
-                      "//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/" +
+                      "https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/" +
                       item.night_weather_code +
                       ".svg"
                     }
@@ -601,48 +603,76 @@ function Weather({
         </p>
       </>
     )
+
+    const gettingPlatform = (
+      <div id="ct-pub">
+        <p className="txt hide">
+          中央气象台{" "}
+          {current["update_time"].substring(8, 10) +
+            ":" +
+            current["update_time"].substring(10, 12)}
+          发布
+        </p>
+      </div>
+    )
+
+    const mainWeatherInfo = (
+      <>
+        <p id="txt-temperature" className="positive">
+          {current["degree"]}
+        </p>
+        <p id="txt-weather">{[current["weather"]]}</p>
+
+        <div id="ct-wind-humidity">
+          <p className={windOrHumidity ? "show txt" : "txt"}>
+            {todayForecast["day_wind_direction"]}{" "}
+            {todayForecast["day_wind_power"]}级
+          </p>
+          <p className={!windOrHumidity ? "show txt" : "txt"}>
+            湿度 {current["humidity"]}%
+          </p>
+        </div>
+      </>
+    )
+
+    const tip = (
+      <p id="txt-tips">
+        {observe?.["tips"]?.["observe"]?.[1] ?? "天气太热了，空调打开～"}
+      </p>
+    )
+
+    const airQuality = (
+      <>
+        <div id="ct-landscape">
+          <div className="layer" id="layer1"></div>
+          <div className="layer" id="layer2"></div>
+          <div
+            className="layer"
+            id="layer3"
+            style={{ transform: "translate3d(0px, 0px, 0px)" }}></div>
+        </div>
+        <div className="ct-aqi level2" data-boss="aqi">
+          <p id="til">{observe["air"]["aqi"]}</p>
+          <p id="value">{observe["air"]["aqi_name"]}</p>
+        </div>
+      </>
+    )
+
+    console.log("7878", observe["tips"])
     return (
       <div className="weather-root" {...props}>
         <section id="sec-main" className={mainClass}>
           {cityLocation}
-          <div id="ct-pub">
-            <p className="txt hide">
-              中央气象台{" "}
-              {current["update_time"].substring(8, 10) +
-                ":" +
-                current["update_time"].substring(11, 12)}
-              发布
-            </p>
-          </div>
-          <p id="txt-temperature" className="positive">
-            {current["degree"]}
-          </p>
-          <p id="txt-weather">{[current["weather"]]}</p>
-          <div id="ct-wind-humidity">
-            <p className={windOrHumidity ? "show txt" : "txt"}>
-              {todayForecast["day_wind_direction"]}{" "}
-              {todayForecast["day_wind_power"]}级
-            </p>
-            <p className={!windOrHumidity ? "show txt" : "txt"}>
-              湿度 {current["humidity"]}%
-            </p>
-          </div>
-          <p id="txt-tips" onClick={changeTip}>
-            {observe["tips"]["observe"][tip]}
-          </p>
-          <div id="ct-landscape">
-            <div className="layer" id="layer1"></div>
-            <div className="layer" id="layer2"></div>
-            <div
-              className="layer"
-              id="layer3"
-              style={{ transform: "translate3d(0px, 0px, 0px)" }}></div>
-          </div>
-          <div className="ct-aqi level2" data-boss="aqi">
-            <p id="til">{observe["air"]["aqi"]}</p>
-            <p id="value">{observe["air"]["aqi_name"]}</p>
-          </div>
+
+          {gettingPlatform}
+
+          {mainWeatherInfo}
+
+          {tip}
+
+          {airQuality}
         </section>
+
         {showTomorrow && (
           <section id="sec-tomorrow" className="container">
             <div className="item">
@@ -653,10 +683,11 @@ function Weather({
                   &deg;
                 </p>
               </div>
+
               <div className="bottom">
                 <p className="weather">{todayForecast["day_weather"]}</p>
                 <img
-                  src={`//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/${todayForecast["day_weather_code"]}.svg`}
+                  src={`https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/${todayForecast["day_weather_code"]}.svg`}
                   className="logo"
                 />
               </div>
@@ -672,7 +703,7 @@ function Weather({
               <div className="bottom">
                 <p className="weather">{tomorrowForecast["day_weather"]}</p>
                 <img
-                  src={`//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/${tomorrowForecast["day_weather_code"]}.svg`}
+                  src={`https://mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/${tomorrowForecast["day_weather_code"]}.svg`}
                   className="logo"
                 />
               </div>
