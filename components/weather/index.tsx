@@ -640,14 +640,14 @@ function Weather({
 
     const airQuality = (
       <>
-        <div id="ct-landscape">
+        {/* <div id="ct-landscape">
           <div className="layer" id="layer1"></div>
           <div className="layer" id="layer2"></div>
           <div
             className="layer"
             id="layer3"
             style={{ transform: "translate3d(0px, 0px, 0px)" }}></div>
-        </div>
+        </div> */}
         <div className="ct-aqi level2" data-boss="aqi">
           <p id="til">{observe["air"]["aqi"]}</p>
           <p id="value">{observe["air"]["aqi_name"]}</p>
