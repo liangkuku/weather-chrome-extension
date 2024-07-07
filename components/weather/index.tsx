@@ -107,7 +107,6 @@ function Weather({
    * @param {Object} observe
    */
   const initHours = (observe) => {
-    // console.log("7878",observe["forecast_1h"])
     let keys = Object.keys(observe["forecast_1h"])
       .sort((pre, cur) => {
         const m = parseInt(pre)
@@ -121,7 +120,6 @@ function Weather({
         }
       })
       .slice(0, 25)
-    console.log("7878", keys)
     let list = []
     keys.forEach((key) => {
       let day = observe["forecast_1h"][key]
@@ -587,7 +585,6 @@ function Weather({
     daysDragLock = false
   }
   if (observe) {
-    console.log("ovserve", observe)
     let current = observe["observe"]
     let tomorrowForecast = observe["forecast_24h"][2]
     let todayForecast = observe["forecast_24h"][1]
@@ -658,7 +655,6 @@ function Weather({
       </>
     )
 
-    console.log("7878", observe["tips"])
     return (
       <div className="weather-root" {...props}>
         <section id="sec-main" className={mainClass}>

@@ -98,7 +98,6 @@ const handler: PlasmoMessaging.MessageHandler<
   RequestBody,
   RequestResponse
 > = async (request, response) => {
-  console.log("hahahaha")
   const { province = "上海", city = "上海" } = request.body
   const url = `https://wis.qq.com/weather/common?source=pc&weather_type=forecast_1h|forecast_24h|alarm|limit|tips|rise|observe|index|air&province=${province}&city=${city}&county=`
 

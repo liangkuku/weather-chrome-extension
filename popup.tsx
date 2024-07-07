@@ -22,6 +22,7 @@ function IndexPopup() {
   }, [])
 
   useEffect(() => {
+    console.log("get weather info")
     getWeatherInfo()
   }, [])
 
